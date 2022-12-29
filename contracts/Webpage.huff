@@ -1,0 +1,119 @@
+
+/*
+ * Webpage used to store a fixed-length array of the current IPFS hash of
+ * the directory containing the posts for the day (their titles and
+ * summaries), people who're members tracked in the site, individual
+ * people information in the form of their responses to the questions
+*/
+
+#include "./WebpageStorage.huff"
+#include "./Utils.huff"
+#include "./Errors.huff"
+
+/*
+ * initialisation
+ */
+
+#define function initialise(address,address,address) nonpayable returns ()
+
+/*
+ * getters
+ */
+
+#define function articlesHash() view returns (bytes20)
+#define function peopleHash() view returns(bytes20)
+#define function operator() view returns (address)
+#define function submitter() view returns (address)
+#define function emergency() view returns (address)
+#define function operational() view returns (bool)
+
+/*
+ * constants
+ */
+
+// the version to check against
+#define constant VERSION = 0x01
+
+/// @notice used to set up the contract and prefill it for the first
+/// time, checking the initialised slot
+#define macro MACRO_INITIALISE() = {
+	[SLOT_UINT8_VERSION] sload [VERSION] eq bad jumpi	// jump to bad if the version is set to VERSION
+
+	// calldata: [selector, operator address, submitter address, emergency council address]
+
+	// set the operator, the emergency address, the submitter and the operational status
+
+	0x08 calldataload dup1 iszero bad jumpi	// [operator address] jump if operator is empty
+
+	[SLOT_ADDRESS_OPERATOR] sstore	// [] store the operator address
+
+	0x28 calldataload dup1 iszero bad jumpi	// [submitter] jump if submitter is empty
+
+	[SLOT_ADDRESS_SUBMITTER] sstore	// [] store the submitter address
+
+	0x48 calldataload dup1 iszero bad jumpi	// [emergency address] jump if emergency council is empty
+
+	[SLOT_ADDRESS_EMERGENCY] sstore	// [] store the emergency address
+
+	0x01 [SLOT_BOOL_OPERATIONAL] sstore	// [] store the operational status to true
+
+	0x01 [SLOT_UINT8_VERSION] sstore	// [] store the version to 1
+
+	0x00 0x00 return	// []
+
+	bad: 0x00 0x00 revert
+}
+
+#define macro REQUIRE_OPERATIONAL() = {
+	 [SLOT_BOOL_OPERATIONAL] iszero jumpi bad
+	 bad: 0x00 0x00 revert
+}
+
+#define fn REQUIRE_SUBMITTER_OR_OPERATOR() = {
+	[SLOT_ADDRESS_SUBMITTER] caller eq jumpi good	// [] if caller = submitter jump good
+	[SLOT_ADDRESS_OPERATOR] caller eq jumpi good	// [] if caller = operator jump good
+	0x00 0x00 revert
+
+	good:
+}
+
+#define macro UPDATE_ARTICLES_HASH() = takes(0) returns(0) {
+	REQUIRE_OPERATIONAL()
+	REQUIRE_SUBMITTER_OR_OPERATOR()
+
+	0x08 calldataload	// [articles hash]
+
+	[SLOT_BYTES_ARTICLES] sstore
+
+	0x00 0x00 return
+}
+
+#define macro MAIN() = takes(0) returns(0) {
+	0x00 calldataload 0xE0 shr	// [function selector]
+
+	dup1 __FUNC_SIG(articlesHash) eq articlesHash jumpi	// jump to articles hash
+	dup1 __FUNC_SIG(peopleHash) eq peopleHash jumpi	// jump to people hash
+
+	dup1 __FUNC_SIG(initialise) eq initialise jumpi		// jump to initialise
+
+	dup1 __FUNC_SIG(operator) eq operator jumpi		// jump operator
+	dup1 __FUNC_SIG(submitter) eq submitter jumpi	// jump submitter
+	dup1 __FUNC_SIG(emergency) eq emergency jumpi	// jump emergency
+	dup1 __FUNC_SIG(operational) eq operational jumpi	// jump operational
+
+	0x00 0x00 revert	// didn't find a function, revert time
+
+	// initialisation
+
+	initialise: MACRO_INITIALISE()
+
+	// selectors used likely offline
+
+	articlesHash: VIEW_SLOT(SLOT_BYTES_ARTICLES)	// return the articles hash
+	peopleHash: VIEW_SLOT(SLOT_BYTES_PEOPLE)	// return the people hash
+
+	operator: VIEW_SLOT(SLOT_ADDRESS_OPERATOR)		// return the operator
+	submitter: VIEW_SLOT(SLOT_ADDRESS_SUBMITTER)		// return the submitter
+	emergency: VIEW_SLOT(SLOT_ADDRESS_EMERGENCY)	// return the emergency address
+	operational: VIEW_SLOT(SLOT_BOOL_OPERATIONAL)		// return the operational status
+}
