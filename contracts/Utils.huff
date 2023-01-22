@@ -1,8 +1,0 @@
-
-// take a slot and an offset and `return` it
-#define macro VIEW_SLOT(slot) = {
-	// []
-	<slot> sload 0x00 mstore push1 0x40 0x00 return
-}
-
-#define macro MAIN() = takes(0) returns(0) {}
