@@ -1,22 +1,17 @@
 
 # Make Adelaide
 
+## Mission
+
 Make Adelaide promotes and informs the entrepreneurship community of
 Adelaide with events, news, interviews and prediction markets. The
 organisation is run trustlessly as a DAO and advances protocol-driven
 entrepreneurship.
 
+## How?
+
 The DAO executive team acts to facilitate the goals of the
 [mandates](MANDATES.md).
-
-## Mission
-
-To promote and inform the entrepreneurship community of Adelaide with
-events, news, interviews and publicly accessible prediction markets.
-The organisation is run trustlessly as a DAO and promotes
-protocol-driven entrepreneurship.
-
-## How?
 
 Executive team members of the DAO are elected by the community via the
 DAO using it's governance platform.
