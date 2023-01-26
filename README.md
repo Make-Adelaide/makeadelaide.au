@@ -1,19 +1,13 @@
 
 # Make Adelaide
 
-Make Adelaide is a DAO powered by Ethereum smart contracts running on
-Optimism.
+Make Adelaide promotes and informs the entrepreneurship community of
+Adelaide with events, news, interviews and prediction markets. The
+organisation is run trustlessly as a DAO and advances protocol-driven
+entrepreneurship.
 
-The DAO:
-
-1. Collects and aggregates news across Adelaide in one place
-
-2. Interviews local entrepreneurs and makes it easy to access them
-
-3. Organises events, networking and technical talks promoting
-protocol-driven entrepreneurship
-
-4. Facilitates voting of key decisions via DAO and it's decisions
+The DAO executive team acts to facilitate the goals of the
+[mandates](MANDATES.md).
 
 ## Mission
 
@@ -22,29 +16,30 @@ events, news, interviews and publicly accessible prediction markets.
 The organisation is run trustlessly as a DAO and promotes
 protocol-driven entrepreneurship.
 
+## How?
+
+Executive team members of the DAO are elected by the community via the
+DAO using it's governance platform.
+
 ## DAO
 
 There are three tiers of power in the DAO:
 
 ### The executive council
 
-The executive council can:
+The executive council acts to facilitate the [mandates](MANDATES.md).
 
-- Create POAPs for events
+### The emergency council
 
-- Can shut down the contract
-
-2. The emergency council
+The emergency council can:
 
 - Can shut down the contract
 
-3. Ordinary users
+### Community
 
-- Can elect a new executive council if someone submits a ballet to do so
-
-- Can adjust CHARTER.md of the DAO
-
-- Can propose events and have them organised
+The community can vote on and have executed proposals including the
+replacement of members of the executive team, the organisation of
+events and more.
 
 Ownership power is 1-to-1 by Make Adelaide POAPs that are distributed
 at events organised in person in the City of Adelaide.
