@@ -37,5 +37,5 @@ mandates
 
 ---
 
-[^1] A commercial mandate is a mandate created in tandem with another
+[^1]: A commercial mandate is a mandate created in tandem with another
 organisation
