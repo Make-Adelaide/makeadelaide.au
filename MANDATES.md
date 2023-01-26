@@ -14,7 +14,13 @@ with POAPs.
 - Facilitate the joining of membership to the DAO via POAPs
 distributed at Make Adelaide DAO events, 1 POAP per attendance
 
-- To create a safe and inclusive events and Discord environment
+- To create an inclusive events and Discord environment
+
+- To exclusively initially receive funding to the DAO contract where
+appropriate in line with the MANDATES.md
+
+- To require and facilitate the updating of MANDATES.md in the
+creation of proposals
 
 ---
 
