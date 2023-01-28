@@ -7,3 +7,5 @@ seth*
 web/build/
 build/
 **/__pycache__/
+build/done
+test

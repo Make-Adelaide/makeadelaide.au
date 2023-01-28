@@ -11,7 +11,7 @@ entrepreneurship.
 ## How?
 
 The DAO executive team acts to facilitate the goals of the
-[mandates](MANDATES.md).
+[governance mandates](GOVERNANCE.md).
 
 Executive team members of the DAO are elected by the community via the
 DAO using it's governance platform.
@@ -22,7 +22,8 @@ There are three tiers of power in the DAO:
 
 ### The executive council
 
-The executive council acts to facilitate the [mandates](MANDATES.md).
+The executive council acts to facilitate the [governance
+mandates](GOVERNANCE.md).
 
 ### The emergency council
 
@@ -39,5 +40,5 @@ events and more.
 Ownership power is 1-to-1 by Make Adelaide POAPs that are distributed
 at events organised in person in the City of Adelaide.
 
-Members join the DAO by signing PLEDGE.txt on-chain on Optimism
-in the `join` function.
+Members join the DAO by signing PLEDGE.txt on-chain on Optimism in the
+`join` function.
