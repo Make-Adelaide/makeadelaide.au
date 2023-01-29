@@ -127,6 +127,7 @@ def approve(_spender: address, _value: uint256) -> bool:
 @internal
 def __mint(_recipient: address, _value: uint256):
 	self.balanceOf[_recipient] += _value
+	log Minted(_recipient, _value)
 
 @external
 def operator_mint(_recipient: address, _value: uint256):
@@ -212,8 +213,6 @@ def _mint(
 	self.__mint(_recipient, _value)
 
 	self.nonce[_recipient] += 1
-
-	log Minted(_recipient, _value)
 
 @external
 def mint(
