@@ -2,25 +2,35 @@
 1. Collect and aggregate news across Adelaide in one place via
 makeadelaide.au
 
-2. Interview local entrepreneurs and make for them to build
+2. Interview local entrepreneurs and support them in building
 relationships
 
 3. Organise events, networking and technical talks advancing
 protocol-driven[^1] entrepreneurship
 
 4. Facilitate voting of key decisions via the DAO with 1-to-1 voting
-with POAPs
+with Token
 
 5. Execute proposals voted into action by ordinary members of the DAO
 
-6. Facilitate the joining of membership to the DAO via POAPs
-distributed at Make Adelaide DAO events, 1 POAP per attendance
+6. Facilitate the joining of membership to the DAO via Tokens
+distributed at Make Adelaide DAO events, 10 Token(s) per attendance
+
+	a. To facilitate the joining of membership via a simple app
+	located at join.makeadelaide.au
 
 7. To create an inclusive events and Discord environment
 
-8. To exclusively receive funding to the DAO contract
+8. To exclusively receive funding intended for the organisation to the
+DAO contract
 
-9. To create a formal on-chain Vote proposal and proposal via Snapshot
+9. To facilitate the separation of community members, the "executive
+council" and the "emergency council" in practice
+
+10. To facilitate the elected emergency council to have the power of
+disabling the contract
+
+11. To create a formal on-chain Vote proposal and proposal via Snapshot
 that is accepted for any of the following actions that might be
 undertaken:
 
@@ -28,19 +38,19 @@ undertaken:
 
 	b. Allocating treasury funds
 
-10. To create and pass a proposal via Snapshot for any of the
+12. To create and pass a proposal via Snapshot for any of the
 following actions that might be undertaken:
 
 	a. Election of a new member to the executive team
 
 	b. Creation of a mandate (ie, teach X technology specifically)
 
-		- Creation of new commercial mandates [^2] must have
-		clearly defined KPIs and end date
+	Creation of new commercial mandates [^2] must have
+	clearly defined KPIs and end date
 
 	c. Receiving money into the treasury
 
-12. To notify the community via a meaningful channel when the
+14. To notify the community via a meaningful channel when the
 following actions are taken:
 
 	a. Creation of blog posts for other organisations that fits
@@ -50,7 +60,7 @@ following actions are taken:
 
 	c. Organising events that fit within the mandates
 
-	d. Creating POAPs for events
+	d. Creating Tokens for events
 
 	e. Shutting down the contract
 

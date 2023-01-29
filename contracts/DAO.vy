@@ -24,7 +24,7 @@ struct Vote:
 
 @external
 def initialise(_executive_council: address):
-	assert self.version != VERSION, "already initialised"
+	assert self.version <= VERSION, "already initialised"
 	self.version = VERSION
 	self.executive_council = _executive_council
 
