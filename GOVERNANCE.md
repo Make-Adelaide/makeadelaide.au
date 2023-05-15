@@ -1,36 +1,33 @@
 
-1. Collect and aggregate news across Adelaide in one place via
-makeadelaide.au
-
-2. Interview local entrepreneurs and support them in building
+1. Interview local entrepreneurs and support them in building
 relationships
 
-3. Organise events, networking and technical talks advancing
+2. Organise events, networking and technical talks advancing
 protocol-driven[^1] entrepreneurship
 
-4. Facilitate voting of key decisions via the DAO with 1-to-1 voting
+3. Facilitate voting of key decisions via the DAO with 1-to-1 voting
 with Token
 
-5. Execute proposals voted into action by ordinary members of the DAO
+4. Execute proposals voted into action by ordinary members of the DAO
 
-6. Facilitate the joining of membership to the DAO via Tokens
+5. Facilitate the joining of membership to the DAO via Tokens
 distributed at Make Adelaide DAO events, 10 Token(s) per attendance
 
 	a. To facilitate the joining of membership via a simple app
 	located at join.makeadelaide.au
 
-7. To create an inclusive events and Discord environment
+6. To create an inclusive events and Discord environment
 
-8. To exclusively receive funding intended for the organisation to the
+7. To exclusively receive funding intended for the organisation to the
 DAO contract
 
-9. To facilitate the separation of community members, the "executive
+8. To facilitate the separation of community members, the "executive
 council" and the "emergency council" in practice
 
-10. To facilitate the elected emergency council to have the power of
+1-1. To facilitate the elected emergency council to have the power of
 disabling the contract
 
-11. To create a formal on-chain Vote proposal and proposal via Snapshot
+10. To create a formal on-chain Vote proposal and proposal via Snapshot
 that is accepted for any of the following actions that might be
 undertaken:
 
@@ -38,7 +35,7 @@ undertaken:
 
 	b. Allocating treasury funds
 
-12. To create and pass a proposal via Snapshot for any of the
+11. To create and pass a proposal via Snapshot for any of the
 following actions that might be undertaken:
 
 	a. Election of a new member to the executive team
@@ -50,7 +47,7 @@ following actions that might be undertaken:
 
 	c. Receiving money into the treasury
 
-14. To notify the community via a meaningful channel when the
+13. To notify the community via a meaningful channel when the
 following actions are taken:
 
 	a. Creation of blog posts for other organisations that fits

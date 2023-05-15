@@ -1,4 +1,4 @@
-# @version ^0.3.7
+# @version 0.3.7
 
 """
 @title Make Adelaide DAO unit of voting power
@@ -240,7 +240,7 @@ def mint(
 def multicall_mint(_mints: Mint[20]):
 	"""
 	@notice multicall_mint using the Mint array given (max 20 items)
-	@pararm _mints array containing each mint
+	@param _mints array containing each mint
 	"""
 
 	for mint in _mints:

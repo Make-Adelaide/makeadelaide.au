@@ -7,7 +7,8 @@ seth*
 web/build/
 build/
 **/__pycache__/
-build/done
 test
 *.out
 install
+node_modules/
+build/

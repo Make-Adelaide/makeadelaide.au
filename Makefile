@@ -1,21 +1,11 @@
 
-.PHONY: build clean
+.PHONY: build clean test
 
 all: build
 
-BUILD_FILES := $(shell find contracts)
+BUILD_FILES := $(shell find contracts -type f)
 
-TEST_FILES := $(shell find tests -type f ! -path '*/.pytest_cache/**')
+ADMIN_ARTIFACT := artifacts/contracts/Admin.vy/Admin.json
 
-build: build/done
-
-build/done: ${BUILD_FILES}
-	@brownie compile
-	@touch build/done
-
-test: ${BUILD_FILES} ${TEST_FILES}
-	@brownie test
-	@touch test
-
-clean:
-	@rm -rf build
+test:
+	@npx hardhat test
