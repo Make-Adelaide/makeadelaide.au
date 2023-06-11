@@ -12,3 +12,5 @@ test
 install
 node_modules/
 build/
+artifacts-zk
+cache-zk

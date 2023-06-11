@@ -1,5 +1,5 @@
 
-# Proposal format for new members of the DAO
+# Proposal format for new members of the DAO executive team
 
 ## Who are you, and what's your background?
 

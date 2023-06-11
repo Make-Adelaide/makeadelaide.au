@@ -40,12 +40,8 @@ The emergency council can:
 
 ### Community
 
-The community can vote on and have executed proposals including the
-replacement of members of the executive team, the organisation of
-events and more.
+The community can vote on and execute proposals including the
+replacement of members of the executive team.
 
 Ownership power is 1-to-1 by Make Adelaide POAPs that are distributed
 at events organised in person in the City of Adelaide.
-
-Members join the DAO by signing PLEDGE.txt on-chain on Optimism in the
-`join` function.
