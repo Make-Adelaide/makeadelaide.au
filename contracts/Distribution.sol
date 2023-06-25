@@ -41,6 +41,7 @@ struct Distributor {
 }
 
 struct Redemption {
+    address redeemer;
     address recipient;
     uint256 eventNumber;
     uint256 nonce;
@@ -135,12 +136,14 @@ contract Distribution is OwnableUpgradeable {
     }
 
     function _hashRedemption(
+        address _redeemer,
         address _recipient,
         uint256 _eventNumber,
         uint256 _nonce
     ) internal pure returns (bytes32) {
         return keccak256(abi.encode(
-            keccak256("Redemption(address recipient,uint256 eventNumber,uint256 nonce)"),
+            keccak256("Redemption(address redeemer,address recipient,uint256 eventNumber,uint256 nonce)"),
+            _redeemer,
             _recipient,
             _eventNumber,
             _nonce
@@ -148,7 +151,7 @@ contract Distribution is OwnableUpgradeable {
     }
 
     function hashRedemption(Redemption memory _v) public pure returns (bytes32) {
-        return _hashRedemption(_v.recipient, _v.eventNumber, _v.nonce);
+        return _hashRedemption(_v.redeemer, _v.recipient, _v.eventNumber, _v.nonce);
     }
 
     function redemptionNonceNotUsed(address _signer, uint256 _pos) public view returns (bool) {
@@ -156,6 +159,7 @@ contract Distribution is OwnableUpgradeable {
     }
 
     function redeemParticipation(
+        address _redeemer,
         address _recipient,
         uint256 _eventNumber,
         uint256 _nonce,
@@ -167,12 +171,14 @@ contract Distribution is OwnableUpgradeable {
             keccak256(abi.encodePacked(
                 "\x19\x01",
                 DOMAIN_SEPARATOR(),
-                _hashRedemption(_recipient, _eventNumber, _nonce)
+                _hashRedemption(_redeemer, _recipient, _eventNumber, _nonce)
             )),
             _v,
             _r,
             _s
         );
+
+        require(signer == _redeemer, "invalid sig");
 
         require(distributors_[signer].valid, "distributor not active");
 
